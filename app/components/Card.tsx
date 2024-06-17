@@ -35,15 +35,6 @@ const Card = ({ post, children }: CardProps) => {
     <CardContext.Provider value={{ post }}>
       <div className="max-w-sm rounded-2xl shadow-2xl bg-white p-6">
         <div className="px-6 py-4 space-y-3">{children}</div>
-
-        <div className="flex flex-row px-6 pt-4 pb-2 justify-between gap-3">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/2">
-            Button
-          </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-1/2">
-            Cancel
-          </button>
-        </div>
       </div>
     </CardContext.Provider>
   );
@@ -64,4 +55,17 @@ Card.Content = function CardContent() {
 Card.UserName = function CardUserName() {
   const { post } = useCardContext();
   return <p className="text-gray-700 text-sm text-center">{post.user.name}</p>;
+};
+
+Card.Action = function CardAction() {
+  return (
+    <div className="flex flex-row px-6 pt-4 pb-2 justify-between gap-3">
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/2">
+        Button
+      </button>
+      <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-1/2">
+        Cancel
+      </button>
+    </div>
+  );
 };

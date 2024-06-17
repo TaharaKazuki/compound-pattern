@@ -18,6 +18,7 @@ export default function Home() {
         <Card.Title />
         <Card.Content />
         <Card.UserName />
+        <Card.Action />
       </Card>
     </main>
   );
