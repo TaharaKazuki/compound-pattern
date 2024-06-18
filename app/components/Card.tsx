@@ -35,6 +35,7 @@ const Card = ({ post, children }: CardProps) => {
     <CardContext.Provider value={{ post }}>
       <div className="max-w-sm rounded-2xl shadow-2xl bg-white p-6">
         <div className="px-6 py-4 space-y-3">{children}</div>
+        <Card.Action />
       </div>
     </CardContext.Provider>
   );

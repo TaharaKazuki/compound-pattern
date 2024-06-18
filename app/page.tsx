@@ -15,10 +15,9 @@ export default function Home() {
   return (
     <main className="flex h-screen items-center justify-center bg-sky-200">
       <Card post={dummyPostData}>
-        <Card.Title />
-        <Card.Content />
         <Card.UserName />
-        <Card.Action />
+        {/* <Card.Title /> */}
+        <Card.Content />
       </Card>
     </main>
   );
